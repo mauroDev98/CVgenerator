@@ -1,4 +1,5 @@
 import javax.swing.*;
+import java.awt.*;
 
 class VentanaCV extends JFrame {
     VentanaCV() {
@@ -14,8 +15,13 @@ class VentanaCV extends JFrame {
         panelPersonal.add(new JLabel("Teléfono:"));
         panelPersonal.add(new JTextField(20));
 
+        panelPersonal.setLayout(new GridLayout(3, 2, 10, 10));
+
+        JPanel wrapperPersonal = new JPanel();
+        wrapperPersonal.add(panelPersonal);
+
         JTabbedPane pestanas = new JTabbedPane();
-        pestanas.addTab("Datos Personales", panelPersonal);
+        pestanas.addTab("Datos Personales", wrapperPersonal);
         pestanas.addTab("Idiomas", new JPanel());
         pestanas.addTab("Experiencia", new JPanel());
         pestanas.addTab("Educación", new JPanel());
