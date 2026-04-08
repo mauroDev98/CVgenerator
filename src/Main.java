@@ -19,6 +19,8 @@ public class Main {
 
         mauro.imprimirCV();
 
+        new VentanaCV();
+
     }
 }
 
